@@ -13,7 +13,7 @@ import com.org.dto.Notes;
 
 public class NoteDao {
 	public void fetchNotesById(int id){
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Surya");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Auro");
 		
 		EntityManager em = emf.createEntityManager();
 		
@@ -22,7 +22,7 @@ public class NoteDao {
 	}
 	
 	public List<Notes> fetchAllUser(){
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Surya");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Auro");
 		
 		EntityManager em = emf.createEntityManager();
 		

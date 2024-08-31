@@ -1,4 +1,4 @@
-package com.org.dao;
+ package com.org.dao;
 
 import java.util.List;
 
@@ -12,13 +12,15 @@ import com.org.dto.User;
 
 public class UserDao {
 	
-	public void saveAndUpdateUser(User user) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Surya");
+	
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Auro");
 		
 		EntityManager em = emf.createEntityManager();
 		
 		EntityTransaction et = em.getTransaction();
 		
+   public void saveAndUpdateUser(User user) {
+	   
 		et.begin();
 		em.merge(user);
 		et.commit();
@@ -27,9 +29,11 @@ public class UserDao {
 	}
 	
 	public void fetchUserById(int id){
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Surya");
-		
-		EntityManager em = emf.createEntityManager();
+		/*
+		 * EntityManagerFactory emf = Persistence.createEntityManagerFactory("Surya");
+		 * 
+		 * EntityManager em = emf.createEntityManager();
+		 */
 		
 		User user = em.find(User.class, id);
 		
@@ -39,9 +43,9 @@ public class UserDao {
 	
 	
 	public List<User> fetchAllUser(){
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Surya");
-		
-		EntityManager em = emf.createEntityManager();
+//		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Auro");
+//		
+//		EntityManager em = emf.createEntityManager();
 		
 		Query query = em.createQuery("select users from User users");
 		
@@ -58,5 +62,25 @@ public class UserDao {
 		return users;
 		
 	}
+	
+	public User fetchUserByEmailAndPassword(String email,String password) {
+		
+		
+		Query qr=em.createQuery("select S from User S where S.email=?1 , S.password=?2");
+		qr.setParameter(1, email);
+		qr.setParameter(2, password);
+		
+		List<User> users =qr.getResultList();
+		
+		if(users.isEmpty())
+			return null;
+		
+		return users.get(0);
+		
+		
+		
+	}
+	
+	
 
 }
