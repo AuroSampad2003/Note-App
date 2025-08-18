@@ -10,7 +10,7 @@ This project allows users to create, view, update, and delete notes easily.
 
 ---
 
-## 🛠️ Features
+## ✨ Features
 - User authentication (Login/Register)
 - Create new notes
 - Edit existing notes
@@ -20,7 +20,7 @@ This project allows users to create, view, update, and delete notes easily.
 
 ---
 
-## 🚀 Tech Stack
+## 🛠 Tech Stack
 - **Frontend:** HTML, CSS, JSP
 - **Backend:** Java, Servlet
 - **Database:** MySQL
