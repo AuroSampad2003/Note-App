@@ -6,7 +6,7 @@ This project allows users to create, view, update, and delete notes easily.
 ---
 
 ## 🌐 Live Demo
-[Demo Link](#) (Add your hosted link here if deployed)
+[Demo Link](#)
 
 ---
 
@@ -61,8 +61,8 @@ This project allows users to create, view, update, and delete notes easily.
 5. Update your DB configuration in the project (DBConnection.java or similar file):
    ```java
    String url = "jdbc:mysql://localhost:3306/note_app";
-    String username = "root";
-    String password = "your_password";
+   String username = "root";
+   String password = "your_password";
 
 6. Deploy the project to Tomcat and run:
    ```arduino
